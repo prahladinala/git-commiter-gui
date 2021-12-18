@@ -44,35 +44,35 @@ def submit():
 
     # INIT
     init = "git init"
-    print(init)
+    # print(init)
     os.system(init)
     status_text.set("Initalized the repository")
     # time.sleep(5)
 
     # ADD
     add = "git add ."
-    print(add)
+    # print(add)
     os.system(add)
     status_text.set("Added all your files")
     # time.sleep(5)
 
     # COMMIT
     commit = f'git commit -m "{message}"'
-    print(commit)
+    # print(commit)
     os.system(commit)
     status_text.set("Commiting your code to local repo")
     # time.sleep(5)
 
     # BRANCH
     branch = "git branch -M main"
-    print(branch)
+    # print(branch)
     os.system(branch)
     status_text.set("Branch named to main")
     # time.sleep(5)
 
     # REMOTE
     remote = "git remote add origin " + git_url+ ".git"
-    print(remote)
+    # print(remote)
     os.system(remote)
     status_text.set("Adding origin to remote repo")
     # time.sleep(5)
@@ -83,6 +83,9 @@ def submit():
     status_text.set("Pushing your code to remote repo")
     # time.sleep(5)
 
+    # EXIT
+    exitt = "exit"
+    os.system(exitt)
     status_text.set("Pushed your code to remote repo")
 
     msg_var.set("")
